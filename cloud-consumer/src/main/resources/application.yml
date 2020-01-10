@@ -1,13 +1,13 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
-    name: cloud-provider
+    name: cloud-consumer
 eureka:
   client:
     registerWithEureka: true #是否向服务注册中心注册自己
-    fetchRegistry: false #是否检索服务
+    fetchRegistry: true #是否检索服务
     serviceUrl: #服务注册中心的配置内容，指定服务注册中心的位置
       defaultZone: http://peer:8761/eureka/
   instance:

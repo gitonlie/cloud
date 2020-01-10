@@ -9,8 +9,8 @@
     <version>1.0</version>
     <modules>
         <module>cloud-eureka</module>
-        <module>boot-provider</module>
         <module>cloud-provider</module>
+        <module>cloud-consumer</module>
     </modules>
     <packaging>pom</packaging>
 
