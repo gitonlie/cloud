@@ -14,3 +14,18 @@ eureka:
       preferIpAddress:  false
       instance-id:      ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
       status-page-url:  http://${spring.cloud.client.hostname}:${server.port}/demo
+
+
+#用来暴露endpoints的，由于endpoints包含很多敏感信息，除了health、info两个支持直接访问外，
+#其他的默认不支持直接访问，可以指定某个端点访问,如下
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: hystrix.stream
+#现在做测试，所以用通配符，可以访问所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
